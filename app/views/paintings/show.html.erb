@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @painting.name %></h1>
+<p><%= @painting.summary %></p>
+<p><%= @painting.painted_on %></p>
+<p>Painted by: <a href="/artists/<%= @painting.artist.id %>"><%= @painting.artist.name %></a> </p>
+
+<%= link_to 'Edit', edit_painting_path(@painting) %> |
+<%= link_to 'Back', paintings_path %>

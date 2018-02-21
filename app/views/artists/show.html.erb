@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<p>Artist: <%= @artist.name %></p>
+<p>Date of birth: <%= @artist.dob %></p>
+<% @artist.paintings.each do |painting| %>
+  <p> <a href="/paintings/<%= painting.id %>"><%= painting.name %></a></p>
+<% end %>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>
